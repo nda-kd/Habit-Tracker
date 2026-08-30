@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+:root {
+  --paper: #f5efe1;
+  --paper-line: #dfe4c8;
+  --graphite: #33312e;
+  --graphite-soft: #6b665c;
+  --pen-red: #b23b2e;
+  --pen-blue: #3b5b8c;
+  --highlight: #f2d16b;
+}
+
+[data-theme="dark"] {
+  --paper: #252525;
+  --paper-line: #44443f;
+  --graphite: #f5efe1;
+  --graphite-soft: #b8b2a5;
+  --pen-red: #e05a4f;
+  --pen-blue: #7293c7;
+  --highlight: #d8b94f;
+}
+
+@theme {
+  --color-paper: var(--paper);
+  --color-paper-line: var(--paper-line);
+  --color-graphite: var(--graphite);
+  --color-graphite-soft: var(--graphite-soft);
+  --color-pen-red: var(--pen-red);
+  --color-pen-blue: var(--pen-blue);
+  --color-highlight: var(--highlight);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0 27px,
+      var(--paper-line) 27px 28px
+    ),
+    var(--paper);
+  font-family: "Patrick Hand", cursive;
+  color: var(--graphite);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(0, 0, 0, 0.02) 0, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(0, 0, 0, 0.02) 0, transparent 40%);
+}

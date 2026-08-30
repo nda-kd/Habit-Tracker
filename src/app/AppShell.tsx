@@ -1,9 +1,14 @@
 import { Outlet, NavLink } from "react-router";
+import logo from "@/assets/logo.svg";
 
 export const AppShell = () => {
   return (
-    <div className="shel">
-      <aside className="sidebar">
+    <div className="h-dvh flex flex-row flex-wrap">
+      <aside className="sidebar flex flex-col w-max p-9 border-r-[2.5px] border-r-graphite">
+        <div className="flex">
+          <img src={logo} alt="Habit Tracker" className="h-10 w-10 mr-2" />
+          <h1 className="font-kalam text-[30px] font-bold m-0 mb-8">Habitly</h1>
+        </div>
         <NavLink
           to="/"
           className={({ isActive }) =>
