@@ -1,0 +1,67 @@
+{
+  "KPIs": [
+    { "id": 1, "label": "day streak", "value": 12 },
+    { "id": 2, "label": "weekly completion", "value": "70%" },
+    { "id": 3, "label": "habits tracked", "value": 4 },
+    { "id": 4, "label": "best streak (days)", "value": 21 }
+  ],
+
+  "WeeklyReport": [
+    {
+      "id": 1,
+      "habit": "Java Practice",
+      "icon": "☕",
+      "week": [
+        { "id": 1, "day": "mo", "streak": "2%", "done": true },
+        { "id": 2, "day": "tu", "streak": "55%", "done": false },
+        { "id": 3, "day": "we", "streak": "100%", "done": true },
+        { "id": 4, "day": "th", "streak": "25%", "done": null },
+        { "id": 5, "day": "fr", "streak": "66%", "done": null },
+        { "id": 6, "day": "sa", "streak": "0%", "done": null },
+        { "id": 7, "day": "su", "streak": "84%", "done": null }
+      ]
+    },
+    {
+      "id": 2,
+      "habit": "Habit Tracker Project",
+      "icon": "👩‍💻",
+      "week": [
+        { "id": 1, "day": "mo", "streak": "45%", "done": true },
+        { "id": 2, "day": "tu", "streak": "89%", "done": true },
+        { "id": 3, "day": "we", "streak": "0%", "done": true },
+        { "id": 4, "day": "th", "streak": "78%", "done": null },
+        { "id": 5, "day": "fr", "streak": "0%", "done": null },
+        { "id": 6, "day": "sa", "streak": "93%", "done": null },
+        { "id": 7, "day": "su", "streak": "12%", "done": null }
+      ]
+    },
+    {
+      "id": 3,
+      "habit": "German Practice",
+      "icon": "🥨",
+      "week": [
+        { "id": 1, "day": "mo", "streak": "14%", "done": false },
+        { "id": 2, "day": "tu", "streak": "78%", "done": true },
+        { "id": 3, "day": "we", "streak": "33%", "done": true },
+        { "id": 4, "day": "th", "streak": "30%", "done": null },
+        { "id": 5, "day": "fr", "streak": "25%", "done": null },
+        { "id": 6, "day": "sa", "streak": "49%", "done": null },
+        { "id": 7, "day": "su", "streak": "62%", "done": null }
+      ]
+    },
+    {
+      "id": 4,
+      "habit": "Guitar Learning",
+      "icon": "🎸",
+      "week": [
+        { "id": 1, "day": "mo", "streak": "100%", "done": true },
+        { "id": 2, "day": "tu", "streak": "45%", "done": true },
+        { "id": 3, "day": "we", "streak": "20%", "done": false },
+        { "id": 4, "day": "th", "streak": "24%", "done": null },
+        { "id": 5, "day": "fr", "streak": "46%", "done": null },
+        { "id": 6, "day": "sa", "streak": "32%", "done": null },
+        { "id": 7, "day": "su", "streak": "10%", "done": null }
+      ]
+    }
+  ]
+}

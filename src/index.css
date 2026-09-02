@@ -28,6 +28,26 @@
   --color-pen-red: var(--pen-red);
   --color-pen-blue: var(--pen-blue);
   --color-highlight: var(--highlight);
+  --font-kalam: "kalam", cursive;
+  --font-patrick-hand: "patrick hand", cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "kalam";
+  src: url("./assets/fonts/Kalam-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "patrick hand";
+  src: url("./assets/fonts/PatrickHand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 html,
@@ -41,7 +61,7 @@ body {
       var(--paper-line) 27px 28px
     ),
     var(--paper);
-  font-family: "Patrick Hand", cursive;
+  font-family: "patrick hand", cursive;
   color: var(--graphite);
 }
 
@@ -54,4 +74,218 @@ body::before {
   background-image:
     radial-gradient(circle at 15% 20%, rgba(0, 0, 0, 0.02) 0, transparent 40%),
     radial-gradient(circle at 85% 80%, rgba(0, 0, 0, 0.02) 0, transparent 40%);
+}
+
+/* nav stles */
+
+.nav-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  color: var(--graphite-soft);
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease;
+  user-select: none;
+}
+
+.nav-item .ic {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+}
+.nav-item.active {
+  color: var(--graphite);
+  font-weight: 700;
+  font-family: "Kalam", cursive;
+}
+
+.nav-pill {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: var(--highlight);
+  border: 2px dashed var(--graphite);
+  border-radius: 10px;
+  z-index: 0;
+  /* spring-like easing, same family as the theme toggle thumb */
+  transition:
+    transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+    height 0.3s ease;
+}
+
+/* theme button styles */
+
+.theme {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  gap: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: var(--graphite-soft);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease;
+  white-space: nowrap;
+}
+
+.theme.active {
+  background: var(--graphite);
+  color: var(--paper);
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  cursor: default;
+}
+
+.theme-pill {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  background: var(--graphite);
+  border: 2px dashed var(--graphite);
+  border-radius: 12px;
+  z-index: 0;
+  transition:
+    transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+    width 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* outlet content */
+
+.outlet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.outlet-header h1 {
+  font-family: kalam, cursive;
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 0.25 rem;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--pen-red);
+  text-underline-offset: 8px;
+}
+
+.outlet-header span {
+  padding-top: 1.75rem;
+  color: var(--graphite-soft);
+  font-size: 16px;
+}
+
+/* Today */
+
+.panel.wobble-a {
+  filter: url(#wobble);
+}
+.panel.wobble-b {
+  filter: url(#wobble2);
+}
+
+.grid-header span:first-child {
+  text-align: left;
+}
+
+.habit-row:last-child {
+  border-bottom: none;
+}
+
+.cell {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  border: 2px solid var(--graphite);
+  border-radius: 5px;
+  position: relative;
+}
+.cell.done {
+  background: var(--highlight);
+}
+.cell.done::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  width: 13px;
+  height: 8px;
+  border-left: 2.5px solid var(--pen-blue);
+  border-bottom: 2.5px solid var(--pen-blue);
+  transform: rotate(-45deg);
+}
+.cell.blank {
+  border-style: dashed;
+  opacity: 0.45;
+}
+
+.habit-item:nth-child(odd) {
+  filter: url(#wobble);
+}
+.habit-item:nth-child(even) {
+  filter: url(#wobble2);
+}
+
+.mini-bars .bar {
+  width: 8px;
+  background: var(--pen-blue);
+  opacity: 0.5;
+  border-radius: 2px 2px 0 0;
+}
+
+.mini-bars .bar.today {
+  opacity: 1;
+  background: var(--pen-red);
+}
+.check-circle {
+  width: 32px;
+  height: 32px;
+  border: 2.5px solid var(--graphite);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.check-circle.on {
+  background: var(--pen-blue);
+  border-color: var(--pen-blue);
+}
+.check-circle.on::after {
+  content: "✓";
+  color: var(--paper);
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Animations */
+
+@keyframes card-entry {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
