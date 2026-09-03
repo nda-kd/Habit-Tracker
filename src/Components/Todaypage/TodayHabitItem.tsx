@@ -1,9 +1,9 @@
-import type { WeekOverViewProps } from "@/types/habit";
+import type { habitData } from "@/types/habit";
 
-export const TodayHabitItem = ({ today, thisWeek }: WeekOverViewProps) => {
+export const TodayHabitItem = ({ today, myData }: habitData) => {
   return (
     <div className="flex flex-col gap-3 mb-8">
-      {thisWeek.map((habit) => (
+      {myData.map((habit) => (
         <div
           key={habit.id}
           className="animate-[card-entry_0.4s_ease-out_both] habit-item grid grid-cols-[40px_1fr_120px_36px] items-center gap-4 border-2 border-solid border-graphite rounded-xl px-4 py-3 bg-white/25"
@@ -17,7 +17,7 @@ export const TodayHabitItem = ({ today, thisWeek }: WeekOverViewProps) => {
               Description: coming soon ...
             </div>
           </div>
-          <div className="mini-bars flex items-end gap-[3px] h-[30px]">
+          <div className="mini-bars flex items-end gap-0.75 h-7.5">
             {habit.week.map((day) => (
               <div
                 key={day.id}

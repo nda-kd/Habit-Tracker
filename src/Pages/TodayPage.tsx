@@ -3,6 +3,7 @@ import { KPICard } from "@/Components/Todaypage/KPICard";
 import { WeekOverView } from "@/Components/Todaypage/WeekOverView";
 import { TodayHabitItem } from "@/Components/Todaypage/TodayHabitItem";
 import { SectionLabel } from "@/Components/SectionLabel";
+import { Title } from "@/Components/Title";
 import staticsData from "@/data/staticItems.json";
 import ThisWeek from "@/data/staticItems.json";
 
@@ -21,15 +22,9 @@ export const TodayPage = () => {
   };
 
   return (
-    <div className="max-w-275 pt-8 px-11 pb-16">
+    <>
       <header className="outlet-header">
-        <div className="h-min">
-          <h1>Today</h1>
-          <span>
-            {/* {Today.split(",")[0]} , {Today.split(",")[1]} */}
-            {Today}
-          </span>
-        </div>
+        <Title label="Today" description={Today} />
         <input
           className="bg-[rgb(255,255,255)]/30 border-2 border-graphite rounded-[20px] text-[16px] text-graphite-soft py-2 px-6 filter-[url(#wobble2)]"
           type="text"
@@ -44,9 +39,9 @@ export const TodayPage = () => {
         ))}
       </div>
       <SectionLabel label="This week" />
-      <WeekOverView today={dayIndex} thisWeek={ThisWeek.WeeklyReport} />
+      <WeekOverView today={dayIndex} myData={ThisWeek.habitData} />
       <SectionLabel label=" Today's habits" />
-      <TodayHabitItem today={dayIndex} thisWeek={ThisWeek.WeeklyReport} />
-    </div>
+      <TodayHabitItem today={dayIndex} myData={ThisWeek.habitData} />
+    </>
   );
 };

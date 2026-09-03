@@ -6,11 +6,30 @@
     { "id": 4, "label": "best streak (days)", "value": 21 }
   ],
 
-  "WeeklyReport": [
+  "habitData": [
     {
       "id": 1,
       "habit": "Java Practice",
       "icon": "☕",
+      "category": "4",
+      "streak": 3,
+      "rate": "32%",
+      "lastTwoWeeks": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
       "week": [
         { "id": 1, "day": "mo", "streak": "2%", "done": true },
         { "id": 2, "day": "tu", "streak": "55%", "done": false },
@@ -25,11 +44,30 @@
       "id": 2,
       "habit": "Habit Tracker Project",
       "icon": "👩‍💻",
+      "category": "4",
+      "streak": 12,
+      "rate": "86%",
+      "lastTwoWeeks": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
       "week": [
         { "id": 1, "day": "mo", "streak": "45%", "done": true },
         { "id": 2, "day": "tu", "streak": "89%", "done": true },
         { "id": 3, "day": "we", "streak": "0%", "done": true },
-        { "id": 4, "day": "th", "streak": "78%", "done": null },
+        { "id": 4, "day": "th", "streak": "78%", "done": true },
         { "id": 5, "day": "fr", "streak": "0%", "done": null },
         { "id": 6, "day": "sa", "streak": "93%", "done": null },
         { "id": 7, "day": "su", "streak": "12%", "done": null }
@@ -39,6 +77,25 @@
       "id": 3,
       "habit": "German Practice",
       "icon": "🥨",
+      "category": "5",
+      "streak": 7,
+      "rate": "59%",
+      "lastTwoWeeks": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
       "week": [
         { "id": 1, "day": "mo", "streak": "14%", "done": false },
         { "id": 2, "day": "tu", "streak": "78%", "done": true },
@@ -53,6 +110,25 @@
       "id": 4,
       "habit": "Guitar Learning",
       "icon": "🎸",
+      "category": "5",
+      "streak": 4,
+      "rate": "47%",
+      "lastTwoWeeks": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
       "week": [
         { "id": 1, "day": "mo", "streak": "100%", "done": true },
         { "id": 2, "day": "tu", "streak": "45%", "done": true },
@@ -62,6 +138,37 @@
         { "id": 6, "day": "sa", "streak": "32%", "done": null },
         { "id": 7, "day": "su", "streak": "10%", "done": null }
       ]
+    }
+  ],
+
+  "habitFilters": [
+    { "id": "1", "cat": "Health & Wellness", "icon": "🥗", "color": "#3b5b8c" },
+    {
+      "id": "2",
+      "cat": "Fitness & Movement",
+      "icon": "🏃",
+      "color": "#b23b2e"
+    },
+    {
+      "id": "3",
+      "cat": "Mind & Mental Health",
+      "icon": "🧠",
+      "color": "#4c7a4c"
+    },
+    {
+      "id": "4",
+      "cat": "Productivity & Work",
+      "icon": "💼",
+      "color": "#f2d16b"
+    },
+    { "id": "5", "cat": "Personal Growth", "icon": "📈", "color": "#4c7a75" },
+    { "id": "6", "cat": "Finance & Money", "icon": "💰", "color": "#7a4c7a" },
+    { "id": "7", "cat": "Home & Lifestyle", "icon": "🏡", "color": "#d5244e" },
+    {
+      "id": "8",
+      "cat": "Relationships & Social",
+      "icon": "💬",
+      "color": "#2d24d5"
     }
   ]
 }

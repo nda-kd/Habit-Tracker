@@ -60,7 +60,7 @@ export const AppShell = () => {
           </button>
           <ThemeToggler />
         </aside>
-        <main>
+        <main className="relative max-w-275 pt-8 px-11 pb-16">
           <Outlet />
         </main>
       </div>
