@@ -14,6 +14,7 @@
       "category": "4",
       "streak": 3,
       "rate": "32%",
+      "color": "#f2d16b",
       "lastTwoWeeks": [
         false,
         false,
@@ -47,6 +48,7 @@
       "category": "4",
       "streak": 12,
       "rate": "86%",
+      "color": "#2d24d5",
       "lastTwoWeeks": [
         true,
         true,
@@ -80,6 +82,7 @@
       "category": "5",
       "streak": 7,
       "rate": "59%",
+      "color": "#4c7a75",
       "lastTwoWeeks": [
         false,
         true,
@@ -113,6 +116,7 @@
       "category": "5",
       "streak": 4,
       "rate": "47%",
+      "color": "#d5244e",
       "lastTwoWeeks": [
         true,
         false,

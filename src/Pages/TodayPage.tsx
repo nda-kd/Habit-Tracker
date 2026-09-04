@@ -4,19 +4,23 @@ import { WeekOverView } from "@/Components/Todaypage/WeekOverView";
 import { TodayHabitItem } from "@/Components/Todaypage/TodayHabitItem";
 import { SectionLabel } from "@/Components/SectionLabel";
 import { Title } from "@/Components/Title";
+import { getTodayInfo } from "@/utils/dateUtils";
 import staticsData from "@/data/staticItems.json";
 import ThisWeek from "@/data/staticItems.json";
 
 export const TodayPage = () => {
   const [searchItem, setSearchItem] = useState<string>("");
+
+  const TodaysInfo = getTodayInfo();
   const date = new Date();
-  const Today = date.toLocaleDateString("en-US", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
+  const Today =
+    TodaysInfo.dayOfWeek +
+    ", " +
+    TodaysInfo.monthName +
+    " " +
+    TodaysInfo.dayNumber;
   const dayIndex = date.getDay();
+
   const searchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchItem(e.target.value);
   };
