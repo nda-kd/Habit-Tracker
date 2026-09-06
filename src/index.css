@@ -11,13 +11,13 @@
 }
 
 [data-theme="dark"] {
-  --paper: #252525;
-  --paper-line: #44443f;
-  --graphite: #f5efe1;
-  --graphite-soft: #b8b2a5;
-  --pen-red: #e05a4f;
-  --pen-blue: #7293c7;
-  --highlight: #d8b94f;
+  --paper: #1b1f2a;
+  --paper-line: #2c3244;
+  --graphite: #eef1f7;
+  --graphite-soft: #9aa3b8;
+  --pen-red: #ef6f6f;
+  --pen-blue: #64b5f6;
+  --highlight: #ffd166;
 }
 
 @theme {
@@ -349,7 +349,7 @@ body::before {
 
 .emoji-grey {
   filter: grayscale(100%);
-  opacity: 0.6; /* Optional: softens the contrast for a lighter pencil/graphite look */
+  opacity: 0.6;
 }
 
 .icon-btn {
@@ -409,13 +409,15 @@ body::before {
   border-style: dashed;
   opacity: 0.25;
 }
-.day-cell.today {
+/* .day-cell.today {
   border-color: var(--pen-red);
   border-style: dashed;
   background: rgba(242, 209, 107, 0.35);
-}
+} */
 .day-cell.selected {
   background: var(--highlight);
+  border-color: var(--pen-red);
+  border-style: dashed;
 }
 
 .day-cell.today .day-num {
