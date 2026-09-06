@@ -149,8 +149,8 @@ Vite will provide a local development URL in the terminal.
 * [x] Initialize React + TypeScript + Vite project
 * [ ] Build habit tracking interface
 * [ ] Add habit creation
-* [ ] Add daily habit completion
-* [ ] Add calendar view
+* [x] Add daily habit completion
+* [x] Add calendar view
 * [ ] Add statistics and progress visualization
 * [ ] Improve responsive design
 * [ ] Design REST API
