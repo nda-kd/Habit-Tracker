@@ -8,7 +8,7 @@ export const CalenderCell = (day: DayInfo) => {
 
   return (
     <div
-      className={`day-cell cursor-pointer p-2 rounded ${
+      className={`animate-[card-entry_0.7s_ease-out_both] day-cell cursor-pointer p-2 rounded ${
         isSelected ? "selected" : ""
       }`}
       onClick={() => setSelectedDay(day)}

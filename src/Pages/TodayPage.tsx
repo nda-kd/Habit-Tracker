@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { KPICard } from "@/Components/Todaypage/KPICard";
 import { WeekOverView } from "@/Components/Todaypage/WeekOverView";
 import { TodayHabitItem } from "@/Components/Todaypage/TodayHabitItem";
 import { SectionLabel } from "@/Components/SectionLabel";
 import { Title } from "@/Components/Title";
 import { getTodayInfo } from "@/utils/dateUtils";
-import staticsData from "@/data/staticItems.json";
 import ThisWeek from "@/data/staticItems.json";
+import { KPIsReports } from "@/Components/KPIsReports";
 
 export const TodayPage = () => {
   const [searchItem, setSearchItem] = useState<string>("");
@@ -37,11 +36,7 @@ export const TodayPage = () => {
           onChange={(e) => searchHandler(e)}
         />
       </header>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        {staticsData.KPIs.map((kpi, index) => (
-          <KPICard key={kpi.id} index={index} {...kpi} />
-        ))}
-      </div>
+      <KPIsReports />
       <SectionLabel label="This week" />
       <WeekOverView today={dayIndex} myData={ThisWeek.habitData} />
       <SectionLabel label=" Today's habits" />

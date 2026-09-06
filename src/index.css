@@ -426,6 +426,30 @@ body::before {
   font-weight: 700;
 }
 
+/* Profile Page */
+
+.badge {
+  text-align: center;
+  padding: 14px 6px;
+  border: 2px dashed var(--graphite-soft);
+  border-radius: 14px;
+  opacity: 0.4;
+}
+
+.earned {
+  border-style: solid;
+  border-color: var(--graphite);
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.earned:nth-child(2) .icon {
+  background: #cfe0d4;
+}
+.earned:nth-child(3) .icon {
+  background: #f5cfc0;
+}
+
 /* Animations */
 
 @keyframes card-entry {

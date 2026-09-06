@@ -174,5 +174,43 @@
       "icon": "💬",
       "color": "#2d24d5"
     }
+  ],
+
+  "Badges": [
+    {
+      "id": 0,
+      "name": "7-day streak",
+      "icon": "🔥",
+      "isEarned": true,
+      "earnDate": "Jun 3"
+    },
+    {
+      "id": 1,
+      "name": "First habit",
+      "icon": "🌱",
+      "isEarned": true,
+      "earnDate": "Mar 12"
+    },
+    {
+      "id": 2,
+      "name": "Perfect week",
+      "icon": "☀️",
+      "isEarned": true,
+      "earnDate": "Jul 21"
+    },
+    {
+      "id": 3,
+      "name": "30-day streak",
+      "icon": "🏆",
+      "isEarned": false,
+      "earnDate": ""
+    },
+    {
+      "id": 4,
+      "name": "100 check-ins",
+      "icon": "🌙",
+      "isEarned": false,
+      "earnDate": ""
+    }
   ]
 }
