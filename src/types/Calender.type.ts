@@ -1,4 +1,4 @@
-import type { DayInfo } from "./dateUtils.types";
+import type { DayInfo } from "./dateUtils.type";
 
 export interface MonthHeaderProps {
   currentDate: Date;

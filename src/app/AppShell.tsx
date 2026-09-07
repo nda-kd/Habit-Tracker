@@ -3,6 +3,8 @@ import { Outlet, useLocation } from "react-router";
 import { NavButton } from "@/Components/NavButton";
 import logo from "@/assets/logo.svg";
 import { ThemeToggler } from "./ThemeToggler";
+import Modal from "@/Components/Modal/Modal";
+import { AddHabitMModal } from "@/Components/Modal/AddHabitMModal";
 
 const NAVITEMS = [
   { to: "/", label: "Today", icon: "⌂", end: true },
@@ -16,6 +18,7 @@ export const AppShell = () => {
   const listRef = useRef<HTMLDivElement>(null);
   const [pillStyle, setPillStyle] = useState<{ top: number; height: number }>();
   const location = useLocation();
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
 
   useLayoutEffect(() => {
     const activeEl = listRef.current?.querySelector(
@@ -55,7 +58,12 @@ export const AppShell = () => {
             ))}
           </div>
           <hr className="border-0 border-t-[1.5px] border-dashed my-5 opacity-60 border-graphite-soft" />
-          <button className="hover:bg-pen-red/75 hover:text-paper hover:border-paper cursor-pointer border-[2.5px] border-dashed border-pen-red rounded-xl text-pen-red text-center p-2.75 text-[17px] font-kalam font-bold filter:url(#wobble)">
+          <button
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+            className="hover:bg-pen-red/75 hover:text-paper hover:border-paper cursor-pointer border-[2.5px] border-dashed border-pen-red rounded-xl text-pen-red text-center p-2.75 text-[17px] font-kalam font-bold filter:url(#wobble)"
+          >
             New Habit
           </button>
           <ThemeToggler />
@@ -63,6 +71,11 @@ export const AppShell = () => {
         <main className="relative max-w-275 pt-8 px-11 pb-16">
           <Outlet />
         </main>
+        {isModalOpen && (
+          <Modal isOpen={isModalOpen}>
+            <AddHabitMModal onClose={() => setIsModalOpen(false)} />
+          </Modal>
+        )}
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import type { DayInfo } from "@/types/dateUtils.types";
+import type { DayInfo } from "@/types/dateUtils.type";
 import { useCalendar } from "@/Context/CalenderContext";
 
 export const CalenderCell = (day: DayInfo) => {

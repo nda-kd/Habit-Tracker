@@ -1,7 +1,7 @@
 import { CalenderCell } from "./CalenderCell";
 import { getMonthDays } from "@/utils/dateUtils";
 import Data from "@/data/staticItems.json";
-import type { CalenderMonthSheetProps } from "@/types/Calender.type";
+import type { CalenderMonthSheetProps } from "@/types/calender.type";
 
 export const CalenderMonthSheet = ({
   monthDays,

@@ -1,4 +1,4 @@
-import type { habitData } from "@/types/habit";
+import type { habitData } from "@/types/habit.type";
 
 const WEEK = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 

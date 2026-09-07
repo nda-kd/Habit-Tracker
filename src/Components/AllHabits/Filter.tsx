@@ -1,5 +1,5 @@
 import Data from "@/data/staticItems.json";
-import type { HabitFiltersTypes } from "@/types/habit";
+import type { HabitFiltersTypes } from "@/types/habit.type";
 import { useState } from "react";
 
 export const Filter = () => {

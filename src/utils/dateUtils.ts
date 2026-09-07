@@ -1,4 +1,4 @@
-import type { DayInfo, TodayInfo, MonthFormat } from "../types/dateUtils.types";
+import type { DayInfo, TodayInfo, MonthFormat } from "../types/dateUtils.type";
 
 // 1. month name
 export const getMonthName = (

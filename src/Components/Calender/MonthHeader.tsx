@@ -1,4 +1,4 @@
-import type { MonthHeaderProps } from "@/types/Calender.type";
+import type { MonthHeaderProps } from "@/types/calender.type";
 import { getMonthName } from "@/utils/dateUtils";
 import { useState } from "react";
 

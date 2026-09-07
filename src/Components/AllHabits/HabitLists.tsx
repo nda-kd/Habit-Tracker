@@ -1,5 +1,5 @@
 import { HabitBar } from "./HabitBar";
-import type { habitListProps } from "@/types/habit";
+import type { habitListProps } from "@/types/habit.type";
 import Data from "@/data/staticItems.json";
 
 export const HabitLists = ({ myData }: habitListProps) => {

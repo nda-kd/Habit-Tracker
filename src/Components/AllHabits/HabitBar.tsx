@@ -1,4 +1,4 @@
-import type { HabitItem } from "@/types/habit";
+import type { HabitItem } from "@/types/habit.type";
 import Data from "@/data/staticItems.json";
 
 export const HabitBar = (hab: HabitItem) => {

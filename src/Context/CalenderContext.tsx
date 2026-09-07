@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import type { ClanderContextValue } from "@/types/Contex.type";
+import type { ClanderContextValue } from "@/types/contex.type";
 
 export const CalenderContext = createContext<ClanderContextValue | null>(null);
 

@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import type { CalendarDayItem } from "@/types/Contex.type";
+import type { CalendarDayItem } from "@/types/contex.type";
 import { CalenderContext } from "./CalenderContext";
 import { getMonthDays } from "@/utils/dateUtils";
 

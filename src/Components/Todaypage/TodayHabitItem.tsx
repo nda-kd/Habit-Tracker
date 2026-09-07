@@ -1,4 +1,4 @@
-import type { habitData } from "@/types/habit";
+import type { habitData } from "@/types/habit.type";
 
 export const TodayHabitItem = ({ today, myData }: habitData) => {
   return (
