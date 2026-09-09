@@ -8,8 +8,12 @@ export interface CalendarDayItem {
   firstDayIndex: number;
 }
 
-// 2. Represents the Context shared state and updater function
 export interface ClanderContextValue {
   selectedDay: CalendarDayItem;
   setSelectedDay: (day: CalendarDayItem) => void;
+}
+
+export interface ModalContextValue {
+  isModalOpen: boolean;
+  setIsModalOpen: (isOpen: boolean) => void;
 }

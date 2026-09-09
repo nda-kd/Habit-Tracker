@@ -12,7 +12,7 @@ export const CalenderDaySheet = () => {
       })
     : "";
 
-  console.log("::", formattedDate, ":", selectedDay);
+  // console.log("::", formattedDate, ":", selectedDay);
 
   return (
     <div className="animate-[card-entry_0.4s_ease-out_both] max-h-fit border-[2.5px] border-solid border-graphite rounded-2xl px-5.5 py-5 bg-[rgba(255,255,255,.22)] filter-[url(#wobble2)]">

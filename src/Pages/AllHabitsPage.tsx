@@ -4,9 +4,12 @@ import { SectionLabel } from "@/Components/SectionLabel";
 import { HabitLists } from "@/Components/AllHabits/HabitLists";
 import Data from "@/data/staticItems.json";
 import { Filter } from "@/Components/AllHabits/Filter";
+import { useModal } from "@/Context/ModalContext";
 
 export const AllHabitsPage = () => {
   const [searchItem, setSearchItem] = useState<string>("");
+  const { setIsModalOpen } = useModal();
+
   const searchHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchItem(e.target.value);
   };
@@ -26,7 +29,10 @@ export const AllHabitsPage = () => {
             placeholder="search habits..."
             onChange={(e) => searchHandler(e)}
           />
-          <div className="cursor-pointer border-[2.5px] border-(--graphite) rounded-[20px] px-5 py-2.25 text-[16px] font-['Kalam',cursive] font-bold bg-(--pen-red) text-(--paper) shadow-[3px_3px_0_var(--graphite)] -rotate-1 filter-[url(#wobble)] whitespace-nowrap transition-all duration-150 ease-in-out hover:rotate-0 hover:translate-x-0.75 hover:translate-y-0.75 hover:shadow-none active:translate-x-1 active:translate-y-1">
+          <div
+            onClick={() => setIsModalOpen(true)}
+            className="cursor-pointer border-[2.5px] border-(--graphite) rounded-[20px] px-5 py-2.25 text-[16px] font-['Kalam',cursive] font-bold bg-(--pen-red) text-(--paper) shadow-[3px_3px_0_var(--graphite)] -rotate-1 filter-[url(#wobble)] whitespace-nowrap hover:animate-[pencilWobble_0.4s_ease-out_both]"
+          >
             + Add habit
           </div>
         </div>

@@ -5,6 +5,7 @@ import logo from "@/assets/logo.svg";
 import { ThemeToggler } from "./ThemeToggler";
 import Modal from "@/Components/Modal/Modal";
 import { AddHabitMModal } from "@/Components/Modal/AddHabitMModal";
+import { useModal } from "@/Context/ModalContext";
 
 const NAVITEMS = [
   { to: "/", label: "Today", icon: "⌂", end: true },
@@ -18,7 +19,7 @@ export const AppShell = () => {
   const listRef = useRef<HTMLDivElement>(null);
   const [pillStyle, setPillStyle] = useState<{ top: number; height: number }>();
   const location = useLocation();
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+  const { isModalOpen, setIsModalOpen } = useModal();
 
   useLayoutEffect(() => {
     const activeEl = listRef.current?.querySelector(

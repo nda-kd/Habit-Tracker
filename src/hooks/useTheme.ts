@@ -1,18 +1,38 @@
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
+
+type Theme = "light" | "dark";
+
+function getInitialTheme(): Theme {
+  return (localStorage.getItem("theme") as Theme) ?? "light";
+}
+
+let currentTheme: Theme = getInitialTheme();
+const listeners = new Set<() => void>();
+
+function applyTheme(theme: Theme) {
+  currentTheme = theme;
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+  listeners.forEach((listener) => listener());
+}
+
+applyTheme(currentTheme);
+
+function subscribe(callback: () => void) {
+  listeners.add(callback);
+  return () => listeners.delete(callback);
+}
+
+function getSnapshot() {
+  return currentTheme;
+}
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState<"light" | "dark">(
-    () => (localStorage.getItem("theme") as "light" | "dark") ?? "light",
-  );
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+  const theme = useSyncExternalStore(subscribe, getSnapshot);
 
   return {
     theme,
-    setTheme,
-    toggleTheme: () => setTheme((t) => (t === "light" ? "dark" : "light")),
+    setTheme: (t: Theme) => applyTheme(t),
+    toggleTheme: () => applyTheme(theme === "light" ? "dark" : "light"),
   };
 };
