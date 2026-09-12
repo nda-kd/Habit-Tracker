@@ -1,7 +1,6 @@
 import { type ApexOptions } from "apexcharts";
 import { useMemo } from "react";
 import ReactApexChart from "react-apexcharts";
-import { ChartTitle } from "../../ChartTitle";
 import { getTodayInfo } from "@/utils/dateUtils";
 
 export const DailyCompletion = () => {
@@ -34,6 +33,27 @@ export const DailyCompletion = () => {
         type: "bar",
         toolbar: { show: false },
         background: "transparent",
+      },
+      title: {
+        text: "Daily completion",
+        align: "left",
+        margin: 0,
+        style: {
+          fontSize: "18px",
+          fontWeight: "600",
+          fontFamily: "kalam",
+          color: "var(--graphite)",
+        },
+      },
+      subtitle: {
+        text: "Consistency this week",
+        align: "left",
+        margin: -6,
+        style: {
+          fontSize: "15px",
+          fontFamily: "patrick hand",
+          color: "var(--color-graphite-soft)",
+        },
       },
       grid: {
         show: false,
@@ -92,7 +112,6 @@ export const DailyCompletion = () => {
 
   return (
     <div className="chart-section">
-      <ChartTitle title="Daily completion" meta="Consistency this week" />
       <ReactApexChart
         options={options}
         series={series}

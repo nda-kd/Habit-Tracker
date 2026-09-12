@@ -3,7 +3,7 @@ interface KpiCardProps {
   label: string;
   value: number | string;
   key?: number;
-  index?: number; // Added to handle staggered animation delay
+  index?: number;
 }
 
 export const KPICard = ({ label, value, index = 0 }: KpiCardProps) => {

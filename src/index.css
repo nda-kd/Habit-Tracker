@@ -18,6 +18,17 @@
   --pen-red: #ef6f6f;
   --pen-blue: #64b5f6;
   --highlight: #ffd166;
+
+  /* catergory */
+
+  --cat-health: #3b5b8c;
+  --cat-fitness: #b23b2e;
+  --cat-mindfulness: #4c7a4c;
+  --cat-productivity: #c9932e;
+  --cat-finance: #2f8f7a;
+  --cat-relationships: #b8577a;
+  --cat-growth: #8b6fc0;
+  --cat-lifestyle: #a8723f;
 }
 
 @theme {
@@ -30,6 +41,17 @@
   --color-highlight: var(--highlight);
   --font-kalam: "kalam", cursive;
   --font-patrick-hand: "patrick hand", cursive;
+
+  /* catergory */
+
+  --cat-health: #7293c7;
+  --cat-fitness: #e05a4f;
+  --cat-mindfulness: #8fbf8a;
+  --cat-productivity: #dbb35c;
+  --cat-finance: #5cc2ab;
+  --cat-relationships: #e08aa8;
+  --cat-growth: #ad95dd;
+  --cat-lifestyle: #cf9a68;
 }
 
 * {
@@ -480,7 +502,7 @@ body::before {
   border: 2.5px solid var(--graphite, #2a2a2a);
   border-radius: 20px;
   padding: 24px 26px;
-  background: rgba(255, 255, 255, 0.28);
+  /* background: rgba(255, 255, 255, 0.28); */
   filter: url(#wobble);
   position: relative;
   overflow: hidden;

@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import ReactApexChart from "react-apexcharts";
 import { type ApexOptions } from "apexcharts";
-import { ChartTitle } from "../../ChartTitle";
 
 interface LifeArea {
   category: string;
@@ -50,6 +49,27 @@ export const HabitBalance: React.FC = () => {
         size: 5,
         hover: { size: 7 },
       },
+      title: {
+        text: "Habit balance",
+        align: "left",
+        margin: 0,
+        style: {
+          fontSize: "18px",
+          fontWeight: "600",
+          fontFamily: "kalam",
+          color: "var(--graphite)",
+        },
+      },
+      subtitle: {
+        text: "How balanced your habits are",
+        align: "left",
+        margin: -6,
+        style: {
+          fontSize: "15px",
+          fontFamily: "patrick hand",
+          color: "var(--color-graphite-soft)",
+        },
+      },
       plotOptions: {
         radar: {
           polygons: {
@@ -94,8 +114,6 @@ export const HabitBalance: React.FC = () => {
 
   return (
     <div className="chart-section">
-      <ChartTitle title="Habit balance" meta="How balanced your habits are" />
-
       <ReactApexChart
         options={options}
         series={series}

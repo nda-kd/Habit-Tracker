@@ -45,10 +45,7 @@ export const WeeklyStreak: React.FC<WeeklyStreakProps> = ({
   );
 
   return (
-    <div
-      className="chart-section p-6 rounded-2xl space-y-6"
-      style={{ backgroundColor: "rgba(255, 255, 255, 0.28)" }}
-    >
+    <div className="chart-section p-6 rounded-2xl space-y-6">
       <div className="flex justify-between items-start">
         <ChartTitle title="Weekly streak" meta="Keep the chain going" />
         <span
