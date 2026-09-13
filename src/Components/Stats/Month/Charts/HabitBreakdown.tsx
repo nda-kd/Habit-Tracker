@@ -180,7 +180,7 @@ const HabitBreakdown: React.FC<HabitSunburstChartProps> = ({
         margin: 0,
         style: {
           fontSize: "13px",
-          color: "var(--graphite)",
+          color: "var(--graphite-soft)",
         },
       },
       legend: {

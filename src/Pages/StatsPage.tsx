@@ -6,7 +6,7 @@ import type { RangeTab } from "@/types/stats.type";
 import { useLayoutEffect, useRef, useState } from "react";
 
 export const StatsPage = () => {
-  const [range, setRange] = useState<RangeTab>("month");
+  const [range, setRange] = useState<RangeTab>("year");
   const [titleDescription, setTitleDescription] =
     useState<string>("testing...");
   const trackRef = useRef<HTMLDivElement>(null);

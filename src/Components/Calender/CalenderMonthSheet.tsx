@@ -26,8 +26,8 @@ export const CalenderMonthSheet = ({
         </div>
       </div>
       <div className="cal-weekdays grid grid-cols-[repeat(7,1fr)] text-[14px] text-center pb-2 border-b-[1.5px_dashed_var(--graphite-soft)] mb-2">
-        {weekdays.map((day) => (
-          <span>{day}</span>
+        {weekdays.map((day, index) => (
+          <span key={index}>{day}</span>
         ))}
       </div>
       <div className="cal-grid grid grid-cols-[repeat(7,1fr)] auto-rows-21.5 gap-2">

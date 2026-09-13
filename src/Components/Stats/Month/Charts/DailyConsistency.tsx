@@ -171,8 +171,16 @@ const ExactHandDrawnHeatmap: React.FC<CalendarHeatmapProps> = ({
         </filter>
       </svg>
       <div>
-        {title && <h3 className="m-0 mb-0.5 text-xl font-bold">{title}</h3>}
-        {subtitle && <p className="m-0 mb-4 text-sm opacity-75">{subtitle}</p>}
+        {title && (
+          <h3 className="m-0 mb-0.5 text-xl font-bold text-graphite">
+            {title}
+          </h3>
+        )}
+        {subtitle && (
+          <p className="m-0 mb-4 text-sm opacity-75 text-graphite-soft">
+            {subtitle}
+          </p>
+        )}
       </div>
       <div className="grid grid-cols-7 gap-2 text-center font-bold text-[15px] mb-2">
         {WEEKDAYS.map((day, idx) => (

@@ -91,6 +91,7 @@ export const AddHabitMModal = ({ onClose }: addHabit) => {
         <div className="flex flex-wrap gap-2">
           {Data.habitFilters.map((cat) => (
             <div
+              key={cat.id}
               onClick={() =>
                 setSelectedCategory({
                   ...cat,

@@ -6,7 +6,7 @@ export const Badges = () => {
     <div className="animate-[card-entry_0.5s_ease-out_both] panel wobble-b">
       <div className="grid grid-cols-[repeat(5,1fr)] gap-4">
         {Data.Badges.map((badge) => (
-          <BadgeCard {...badge} />
+          <BadgeCard key={badge.id} {...badge} />
         ))}
       </div>
 
