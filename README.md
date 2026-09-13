@@ -147,11 +147,11 @@ Vite will provide a local development URL in the terminal.
 ## 🗺️ Roadmap
 
 * [x] Initialize React + TypeScript + Vite project
-* [ ] Build habit tracking interface
-* [ ] Add habit creation
+* [x] Build habit tracking interface
+* [x] Add habit creation
 * [x] Add daily habit completion
 * [x] Add calendar view
-* [ ] Add statistics and progress visualization
+* [x] Add statistics and progress visualization
 * [ ] Improve responsive design
 * [ ] Design REST API
 * [ ] Build Spring Boot backend
