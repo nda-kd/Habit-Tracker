@@ -106,11 +106,11 @@ export const AddHabitMModal = ({ onClose }: addHabit) => {
         </div>
       </div>
       <div className="flex gap-3 mt-13">
-        <div className="btn cancel" onClick={onClose}>
+        <div className="modal-btn test cancel" onClick={onClose}>
           Cancel
         </div>
         <div
-          className="btn save hover:animate-[pencilWobble_0.4s_ease-out_both]"
+          className="modal-btn save hover:animate-[pencilWobble_0.4s_ease-out_both]"
           onClick={onClose}
         >
           Save habit
